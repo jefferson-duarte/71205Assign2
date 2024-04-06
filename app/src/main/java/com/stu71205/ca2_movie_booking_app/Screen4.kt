@@ -31,7 +31,7 @@ fun Screen4(navController: NavController) {
                     titleContentColor = Color.White,
                 ),
                 title = {
-                    Text(text = "Copy")
+                    Text(text = "GHOSTBUSTERS: FROZEN EMPIRE")
                 }
             )
         },
@@ -57,13 +57,12 @@ fun Screen4(navController: NavController) {
             verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally,
         ){
-//            Movie()
             PartWithImage(
                 painter = painterResource(id = R.drawable.movie_ghostbusters),
             )
 
             PartWithDescription(
-                classifiedImage = painterResource(id = R.drawable.age_free),
+                classifiedImage = painterResource(id = R.drawable.age_12),
                 textTitle = "GHOSTBUSTERS: FROZEN EMPIRE",
                 textStarring = "Paul Rudd, Bill Murray, Finn Wolfhard, Dan Aykroud, Annie Potts, Mckenna Grace, Ernie Hudson\n" +
                             "Run Time 2hr 24mins",
@@ -77,4 +76,3 @@ fun Screen4(navController: NavController) {
         }
     }
 }
-

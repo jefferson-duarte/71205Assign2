@@ -31,7 +31,7 @@ fun Screen3(navController: NavController) {
                     titleContentColor = Color.White,
                 ),
                 title = {
-                    Text(text = "Copy")
+                    Text(text = "GODZILLA X KONG: THE NEW EMPIRE")
                 }
             )
         },
@@ -57,13 +57,12 @@ fun Screen3(navController: NavController) {
             verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally,
         ){
-//            Movie()
             PartWithImage(
                 painter = painterResource(id = R.drawable.movie_gxk),
             )
 
             PartWithDescription(
-                classifiedImage = painterResource(id = R.drawable.age_free),
+                classifiedImage = painterResource(id = R.drawable.age_12),
                 textTitle = "GODZILLA X KONG: THE NEW EMPIRE",
                 textStarring = "Rebecca Hall, Dan Stevens, Brian Tyree Henry, Fala Chen, Kaylee Hottle, Alex Ferns\n" +
                             "Run Time 1hr 55mins",

@@ -26,7 +26,7 @@ import kotlin.random.Random
 @Composable
 fun SeatSelection() {
     var selectedSeats by remember { mutableIntStateOf(0) }
-    val totalSeats = Random.nextInt(0, 4)
+    val totalSeats = Random.nextInt(0, 16)
 
     if (totalSeats < 3){
         selectedSeats = totalSeats

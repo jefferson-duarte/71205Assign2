@@ -6,8 +6,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -31,7 +35,7 @@ fun Screen1(navController: NavController) {
                     titleContentColor = Color.White,
                 ),
                 title = {
-                    Text(text = "Copy")
+                    Text(text = "KUNG FU PANDA 4")
                 }
             )
         },
@@ -57,7 +61,6 @@ fun Screen1(navController: NavController) {
             verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally,
         ){
-//            Movie()
             PartWithImage(
                 painter = painterResource(id = R.drawable.movie_kfp4),
             )

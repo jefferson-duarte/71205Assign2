@@ -31,7 +31,7 @@ fun Screen2(navController: NavController) {
                     titleContentColor = Color.White,
                 ),
                 title = {
-                    Text(text = "Copy")
+                    Text(text = "DUNE: PART TWO")
                 }
             )
         },
