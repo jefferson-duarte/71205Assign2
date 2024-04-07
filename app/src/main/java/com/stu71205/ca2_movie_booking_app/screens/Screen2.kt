@@ -1,11 +1,9 @@
-package com.stu71205.ca2_movie_booking_app
+package com.stu71205.ca2_movie_booking_app.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -18,12 +16,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.stu71205.ca2_movie_booking_app.R
+import com.stu71205.ca2_movie_booking_app.content_parts.PartBottomBar
+import com.stu71205.ca2_movie_booking_app.content_parts.PartWithDescription
+import com.stu71205.ca2_movie_booking_app.content_parts.PartWithImage
+import com.stu71205.ca2_movie_booking_app.content_parts.SeatSelection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Screen3(navController: NavController) {
+fun Screen2(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -32,7 +34,7 @@ fun Screen3(navController: NavController) {
                     titleContentColor = Color.White,
                 ),
                 title = {
-                    Text(text = "GODZILLA X KONG: THE NEW EMPIRE")
+                    Text(text = "DUNE: PART TWO")
                 }
             )
         },
@@ -41,16 +43,7 @@ fun Screen3(navController: NavController) {
                 containerColor = Color.Gray,
                 contentColor = Color.White,
             ){
-                Row (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    horizontalArrangement = Arrangement.Center
-                ){
-                    ToHomeButton(onClick = {
-                        navController.navigate(Routes.HomeScreen.route)
-                    })
-                }
+                PartBottomBar(navController)
             }
         },
     ) {innerPadding ->
@@ -63,19 +56,18 @@ fun Screen3(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ){
             PartWithImage(
-                painter = painterResource(id = R.drawable.movie_gxk),
+                painter = painterResource(id = R.drawable.movie_dunetrailer),
             )
 
             PartWithDescription(
-                classifiedImage = painterResource(id = R.drawable.age_12),
-                textTitle = "GODZILLA X KONG: THE NEW EMPIRE",
-                textStarring = "Rebecca Hall, Dan Stevens, Brian Tyree Henry, Fala Chen, Kaylee Hottle, Alex Ferns\n" +
-                            "Run Time 1hr 55mins",
-                textDescription = "The new installment in the Monsterverse puts the mighty Kong and the fearsome Godzilla against a colossal deadly threat hidden within our world."
+                textDescription = "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.",
+                textStarring = "Timothée Chalamet, Florence Pugh, Zendaya , Souheila Yacoub, Austin Butler\n" +
+                "Run Time 2hr 46mins",
+                textTitle = "DUNE: PART TWO",
+                classifiedImage = painterResource(id = R.drawable.age_12)
             )
 
             SeatSelection()
         }
     }
 }
-

@@ -1,11 +1,9 @@
-package com.stu71205.ca2_movie_booking_app
+package com.stu71205.ca2_movie_booking_app.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -18,12 +16,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.stu71205.ca2_movie_booking_app.R
+import com.stu71205.ca2_movie_booking_app.content_parts.PartBottomBar
+import com.stu71205.ca2_movie_booking_app.content_parts.PartWithDescription
+import com.stu71205.ca2_movie_booking_app.content_parts.PartWithImage
+import com.stu71205.ca2_movie_booking_app.content_parts.SeatSelection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Screen2(navController: NavController) {
+fun Screen4(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -32,7 +34,7 @@ fun Screen2(navController: NavController) {
                     titleContentColor = Color.White,
                 ),
                 title = {
-                    Text(text = "DUNE: PART TWO")
+                    Text(text = "GHOSTBUSTERS: FROZEN EMPIRE")
                 }
             )
         },
@@ -41,16 +43,7 @@ fun Screen2(navController: NavController) {
                 containerColor = Color.Gray,
                 contentColor = Color.White,
             ){
-                Row (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    horizontalArrangement = Arrangement.Center
-                ){
-                    ToHomeButton(onClick = {
-                        navController.navigate(Routes.HomeScreen.route)
-                    })
-                }
+                PartBottomBar(navController)
             }
         },
     ) {innerPadding ->
@@ -63,15 +56,15 @@ fun Screen2(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ){
             PartWithImage(
-                painter = painterResource(id = R.drawable.movie_dunetrailer),
+                painter = painterResource(id = R.drawable.movie_ghostbusters),
             )
 
             PartWithDescription(
-                textDescription = "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.",
-                textStarring = "Timothée Chalamet, Florence Pugh, Zendaya , Souheila Yacoub, Austin Butler\n" +
-                "Run Time 2hr 46mins",
-                textTitle = "DUNE: PART TWO",
-                classifiedImage = painterResource(id = R.drawable.age_12)
+                classifiedImage = painterResource(id = R.drawable.age_12),
+                textTitle = "GHOSTBUSTERS: FROZEN EMPIRE",
+                textStarring = "Paul Rudd, Bill Murray, Finn Wolfhard, Dan Aykroud, Annie Potts, Mckenna Grace, Ernie Hudson\n" +
+                            "Run Time 2hr 24mins",
+                textDescription = "In Ghostbusters: Frozen Empire, the Spengler family returns to where it all started – the iconic New York City firehouse – to team up with the original Ghostbusters."
             )
 
             SeatSelection()

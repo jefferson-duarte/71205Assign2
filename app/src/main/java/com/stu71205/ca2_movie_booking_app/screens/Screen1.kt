@@ -1,11 +1,9 @@
-package com.stu71205.ca2_movie_booking_app
+package com.stu71205.ca2_movie_booking_app.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -18,8 +16,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.stu71205.ca2_movie_booking_app.R
+import com.stu71205.ca2_movie_booking_app.content_parts.PartBottomBar
+import com.stu71205.ca2_movie_booking_app.content_parts.PartWithDescription
+import com.stu71205.ca2_movie_booking_app.content_parts.PartWithImage
+import com.stu71205.ca2_movie_booking_app.content_parts.SeatSelection
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -41,16 +43,7 @@ fun Screen1(navController: NavController) {
                 containerColor = Color.Gray,
                 contentColor = Color.White,
             ){
-                Row (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp),
-                    horizontalArrangement = Arrangement.Center
-                ){
-                    ToHomeButton(onClick = {
-                        navController.navigate(Routes.HomeScreen.route)
-                    })
-                }
+                PartBottomBar(navController)
             }
         },
     ) {innerPadding ->

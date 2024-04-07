@@ -4,6 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.stu71205.ca2_movie_booking_app.screens.Screen1
+import com.stu71205.ca2_movie_booking_app.screens.Screen2
+import com.stu71205.ca2_movie_booking_app.screens.Screen3
+import com.stu71205.ca2_movie_booking_app.screens.Screen4
 
 @Composable
 fun AppNavigation() {

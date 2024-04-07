@@ -1,4 +1,4 @@
-package com.stu71205.ca2_movie_booking_app
+package com.stu71205.ca2_movie_booking_app.content_parts
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -19,6 +19,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.stu71205.ca2_movie_booking_app.R
 
 
 @Composable

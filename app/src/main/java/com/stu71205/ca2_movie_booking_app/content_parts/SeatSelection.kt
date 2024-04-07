@@ -1,4 +1,4 @@
-package com.stu71205.ca2_movie_booking_app
+package com.stu71205.ca2_movie_booking_app.content_parts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
