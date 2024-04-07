@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Search
@@ -25,13 +26,29 @@ fun PartBottomBar(navController: NavController){
         horizontalArrangement = Arrangement.SpaceAround
     ) {
         IconButton(onClick = { navController.navigate(Routes.HomeScreen.route) }) {
-            Icon(Icons.Default.Home, contentDescription = "Home")
+            Icon(
+                Icons.Default.Home,
+                contentDescription = "Home",
+                modifier = Modifier
+                    .size(35.dp)
+            )
         }
         IconButton(onClick = {}) {
-            Icon(Icons.Default.Search, contentDescription = "Search")
+            Icon(
+                Icons.Default.Search,
+                contentDescription = "Search",
+                modifier = Modifier
+                    .size(35.dp)
+            )
+
         }
         IconButton(onClick = {}) {
-            Icon(Icons.Default.Settings, contentDescription = "Settings")
+            Icon(
+                Icons.Default.Settings,
+                contentDescription = "Settings",
+                modifier = Modifier
+                    .size(35.dp)
+            )
         }
     }
 }

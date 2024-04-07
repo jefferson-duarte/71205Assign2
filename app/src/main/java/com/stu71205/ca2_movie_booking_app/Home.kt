@@ -1,25 +1,19 @@
 package com.stu71205.ca2_movie_booking_app
 
-import android.widget.ScrollView
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -64,40 +58,65 @@ fun Home(navController: NavController) {
             }
         },
     ) {innerPadding ->
-        Column(
+        Box(
             modifier = Modifier
-                .background(color = Color.Black)
+                .fillMaxSize()
                 .padding(innerPadding)
-                .fillMaxSize(),
-            verticalArrangement = Arrangement.SpaceEvenly,
-            horizontalAlignment = Alignment.CenterHorizontally,
+                .background(color = Color.Black)
+                .verticalScroll(rememberScrollState())
         ){
-            Row (
-                verticalAlignment = Alignment.CenterVertically,
+            Column(
+                modifier = Modifier
+                    .padding(innerPadding)
+                    .fillMaxSize(),
+                verticalArrangement = Arrangement.SpaceBetween,
+                horizontalAlignment = Alignment.CenterHorizontally,
             ){
-                MovieScree1(onClick = {
-                    navController.navigate(Routes.FirstScreen.route)
-                })
+                Row (
+                    verticalAlignment = Alignment.CenterVertically,
+                ){
+                    MovieScree1(onClick = {
+                        navController.navigate(Routes.FirstScreen.route)
+                    })
 
-                Spacer(modifier = Modifier.width(40.dp))
+                    Spacer(modifier = Modifier.width(40.dp))
 
-                MovieScree2(onClick = {
-                    navController.navigate(Routes.SecondScreen.route)
-                })
-            }
-            
-            Row (
-                verticalAlignment = Alignment.CenterVertically,
-            ){
-                MovieScree3(onClick = {
-                    navController.navigate(Routes.ThirdScreen.route)
-                })
+                    MovieScree2(onClick = {
+                        navController.navigate(Routes.SecondScreen.route)
+                    })
+                }
 
-                Spacer(modifier = Modifier.width(40.dp))
+                Spacer(modifier = Modifier.height(20.dp))
 
-                MovieScree4(onClick = {
-                    navController.navigate(Routes.FourthScreen.route)
-                })
+                Row (
+                    verticalAlignment = Alignment.CenterVertically,
+                ){
+                    MovieScree3(onClick = {
+                        navController.navigate(Routes.ThirdScreen.route)
+                    })
+
+                    Spacer(modifier = Modifier.width(40.dp))
+
+                    MovieScree4(onClick = {
+                        navController.navigate(Routes.FourthScreen.route)
+                    })
+                }
+
+                Spacer(modifier = Modifier.height(20.dp))
+
+                Row (
+                    verticalAlignment = Alignment.CenterVertically,
+                ){
+                    MovieScree3(onClick = {
+                        navController.navigate(Routes.ThirdScreen.route)
+                    })
+
+                    Spacer(modifier = Modifier.width(40.dp))
+
+                    MovieScree4(onClick = {
+                        navController.navigate(Routes.FourthScreen.route)
+                    })
+                }
             }
         }
     }
