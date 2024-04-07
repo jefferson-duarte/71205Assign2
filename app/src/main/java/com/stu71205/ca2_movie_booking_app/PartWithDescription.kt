@@ -15,6 +15,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -64,7 +66,8 @@ fun PartWithDescription(
 
             Row {
                 Text(
-                    fontSize = 14.sp,
+                    fontFamily = FontFamily(Font(R.font.roboto_condensed_regular)),
+                    fontSize = 20.sp,
                     color = Color.White,
                     text = textDescription
                 )

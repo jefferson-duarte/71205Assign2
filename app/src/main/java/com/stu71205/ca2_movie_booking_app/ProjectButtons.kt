@@ -1,7 +1,6 @@
 package com.stu71205.ca2_movie_booking_app
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -26,7 +25,6 @@ fun ToHomeButton(onClick: () -> Unit){
     ElevatedButton(
         onClick = {onClick()},
         modifier = Modifier
-            .background(color = Color.Black)
     ) {
         Text(
             "HOME"

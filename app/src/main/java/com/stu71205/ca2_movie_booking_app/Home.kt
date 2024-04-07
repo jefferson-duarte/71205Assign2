@@ -19,6 +19,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -34,7 +36,11 @@ fun Home(navController: NavController) {
                     titleContentColor = Color.White
                 ),
                 title = {
-                    Text(text = "Copy")
+                    Text(
+                        text = "MOVIES",
+                        fontFamily = FontFamily(Font(R.font.roboto_condensed_regular)),
+                        textAlign = TextAlign.Center
+                    )
                 }
             )
         },
