@@ -96,3 +96,43 @@ fun MovieScree4(onClick: () -> Unit){
         )
     }
 }
+@Composable
+fun MovieScree5(onClick: () -> Unit){
+    ElevatedButton(
+        onClick = {onClick()},
+        shape = ShapeDefaults.ExtraSmall,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color.Gray
+        ),
+        modifier = Modifier
+            .height(200.dp)
+            .width(125.dp)
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.posters_mkm),
+            contentDescription = null,
+            modifier = Modifier
+                .requiredSize(200.dp)
+        )
+    }
+}
+@Composable
+fun MovieScree6(onClick: () -> Unit){
+    ElevatedButton(
+        onClick = {onClick()},
+        shape = ShapeDefaults.ExtraSmall,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color.Gray
+        ),
+        modifier = Modifier
+            .height(200.dp)
+            .width(125.dp)
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.posters_tfo),
+            contentDescription = null,
+            modifier = Modifier
+                .requiredSize(200.dp)
+        )
+    }
+}

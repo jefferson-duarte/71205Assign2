@@ -107,14 +107,14 @@ fun Home(navController: NavController) {
                 Row (
                     verticalAlignment = Alignment.CenterVertically,
                 ){
-                    MovieScree3(onClick = {
-                        navController.navigate(Routes.ThirdScreen.route)
+                    MovieScree5(onClick = {
+                        navController.navigate(Routes.FiftiethScreen.route)
                     })
 
                     Spacer(modifier = Modifier.width(40.dp))
 
-                    MovieScree4(onClick = {
-                        navController.navigate(Routes.FourthScreen.route)
+                    MovieScree6(onClick = {
+                        navController.navigate(Routes.SixthScreen.route)
                     })
                 }
             }

@@ -6,4 +6,6 @@ sealed class Routes (val route: String){
     object SecondScreen : Routes(route = "second_screen")
     object ThirdScreen : Routes(route = "third_screen")
     object FourthScreen : Routes(route = "fourth_screen")
+    object FiftiethScreen : Routes(route = "fiftieth_screen")
+    object SixthScreen : Routes(route = "sixth_screen")
 }

@@ -8,6 +8,8 @@ import com.stu71205.ca2_movie_booking_app.screens.Screen1
 import com.stu71205.ca2_movie_booking_app.screens.Screen2
 import com.stu71205.ca2_movie_booking_app.screens.Screen3
 import com.stu71205.ca2_movie_booking_app.screens.Screen4
+import com.stu71205.ca2_movie_booking_app.screens.Screen5
+import com.stu71205.ca2_movie_booking_app.screens.Screen6
 
 @Composable
 fun AppNavigation() {
@@ -39,6 +41,14 @@ fun AppNavigation() {
         composable(route = Routes.FourthScreen.route)
         {
             Screen4(navController = navController)
+        }
+        composable(route = Routes.FiftiethScreen.route)
+        {
+            Screen5(navController = navController)
+        }
+        composable(route = Routes.SixthScreen.route)
+        {
+            Screen6(navController = navController)
         }
     }
 }
